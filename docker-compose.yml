@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  log_repair_engine:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - .:/app
